@@ -22,7 +22,7 @@ const MyComponent = styled('div')({
 const Home = () => {
 
     const [tagline, setTagline] = useState('');
-    const contractAddress = ""; // Add the contract address here or you can use dotenv package
+    const contractAddress = "0x282f26733a8e275f95c732ae677deda6de2e6e15"; // Add the contract address here or you can use dotenv package
     const contractABI = abi.abi; 
     const addRaffle = async () => {
         try {
