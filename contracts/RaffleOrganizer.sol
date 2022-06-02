@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.21 <8.10.0;
+pragma experimental ABIEncoderV2;
 
 contract RaffleOrganizer {
   // Think of storing this data to offchain
