@@ -20,23 +20,12 @@ const MyComponent = styled('div')({
 });
 
 const Home = () => {
-
+    
     const [tagline, setTagline] = useState('');
     const contractAddress = "0x282f26733a8e275f95c732ae677deda6de2e6e15"; // Add the contract address here or you can use dotenv package
     const contractABI = abi.abi; 
     const addRaffle = async () => {
-        try {
-            const {ethereum} = window;
-            if(ethereum) {
-                const provider = new ethers.providers.Web3Provider(ethereum); 
-                const signer = provider.getSigner(); 
-                const raffleOrganiser = new ethers.Contract(contractAddress, contractABI); 
-                 
-            }
-        } catch (error) {
-            console.log(error);
-        }
-
+        
     }
     // render it with effects
     useEffect(() => {
@@ -52,7 +41,7 @@ const Home = () => {
                 <Typography variant="h1" > Raffle App</Typography>
                 <Typography variant="h5" color={'gray'}>{tagline}</Typography>
                 <Stack direction="row" spacing={2}>
-                    <Button variant="contained" color='secondary' onClick={addRaffle}>Add Raffle</Button>
+                    <Button variant="contained" color='secondary'>Add Raffle</Button>
                     <Button variant="contained" color='secondary'>Participate</Button>
                 </Stack>
            </MyComponent>
