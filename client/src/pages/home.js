@@ -8,6 +8,8 @@ import { ethers } from 'ethers';
 import { EtherscanProvider } from '@ethersproject/providers'; 
 import abi from "../contracts/RaffleOrganizer.json";
 import ConnectWallet from '../components/connectWallet';
+import Participate from './participate';
+import {Link} from 'react-router-dom';
 
 
 const MyComponent = styled('div')({
@@ -41,8 +43,10 @@ const Home = () => {
                 <Typography variant="h1" > Raffle App</Typography>
                 <Typography variant="h5" color={'gray'}>{tagline}</Typography>
                 <Stack direction="row" spacing={2}>
-                    <Button variant="contained" color='secondary'>Add Raffle</Button>
+                <Button variant="contained" color='secondary' onClick={addRaffle}>Add Raffle</Button>
+                    <Link to="/participate">
                     <Button variant="contained" color='secondary'>Participate</Button>
+                    </Link>
                 </Stack>
            </MyComponent>
         </div>
