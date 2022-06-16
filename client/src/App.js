@@ -5,6 +5,7 @@ import Raffles from "./pages/Raffles";
 import modalForm from "./pages/eventAddModal";
 import { Routes, Route } from "react-router-dom"
 import Participate from "./pages/participate"; 
+import CreateRaffle from "./pages/createRaffle";
 
 const App = () => {
 
